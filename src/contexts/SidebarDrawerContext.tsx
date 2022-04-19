@@ -20,4 +20,4 @@ export function SidebarDrawerProvider ({children}:SidebarDrawerProviderProps){
         </SidebarDrawerContext.Provider>
     )
 }
-export const useSidebarDrawer= ()=> useContext(SidebarDrawerContext)
+export const useSidebarDrawer = ()=> useContext(SidebarDrawerContext)

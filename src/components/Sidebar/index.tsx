@@ -7,6 +7,7 @@ export function Sidebar() {
         base:true,
         lg:false
     })
+
 if(isDrawerSidebar){
     const{isOpen,onClose}= useSidebarDrawer()
     return(
@@ -14,11 +15,11 @@ if(isDrawerSidebar){
         <DrawerOverlay>
             <DrawerContent bg="gray.800" p="4">
                 <DrawerCloseButton mt="6"/>
-                <DrawerHeader>
-                    Navegação
-                </DrawerHeader>
+                    <DrawerHeader>
+                        Navegação
+                    </DrawerHeader>
                 <DrawerBody>
-                <SidebarNav/>
+                  <SidebarNav/>
                 </DrawerBody>
             </DrawerContent>
         </DrawerOverlay>
