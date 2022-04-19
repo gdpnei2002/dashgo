@@ -11,12 +11,12 @@ export default function CreateUser() {
             <Flex w="100%" my="6" maxWidth={1480} mx="auto" px="6">
                 <Sidebar />
 
-                <Box flex='1' borderRadius={8} bg="gray.800" p="8">
+                <Box flex='1' borderRadius={8} bg="gray.800" p={["6","8"]}>
                     <Heading size="lg" fontWeight="normal">Criar Usuario</Heading>
                     <Divider my="6" borderColor="gray.700" />
-                    <VStack spacing="8">
+                    <VStack spacing={["6","8"]}>
                         <SimpleGrid minChildWidth={240}
-                            spacing="8"
+                            spacing={["6","8"]}
                             w="100%">
 
                             <Input name="name" label="Nome completo" />
@@ -26,7 +26,7 @@ export default function CreateUser() {
 
                         <SimpleGrid
                             minChildWidth={240}
-                            spacing="8"
+                            spacing={["6","8"]}
                             w="100%">
 
                             <Input name="password" label="Senha" type="password" />
@@ -35,7 +35,7 @@ export default function CreateUser() {
                         </SimpleGrid>
                     </VStack>
                     <Flex mt="8" justify='flex-end'>
-                        <HStack spacing="4">
+                        <HStack spacing={["6","8"]}>
                             <Button colorScheme='whiteAlpha'>Cancelar</Button>
                             <Button colorScheme='pink'>Salvar</Button>
                         </HStack>
