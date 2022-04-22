@@ -12,7 +12,15 @@ export function makeServer(){
             user: Model.extend<Partial<User>>({})
         },
         routes(){
-            
+            this.namespace = 'api';
+            this.timing = 750;
+
+            this.get('/user');
+            this.post('/user');
+
+            this.namespace='';
+            this.passthrough()
         }
     })
+    return server;
 }
