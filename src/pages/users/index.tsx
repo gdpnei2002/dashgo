@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue} from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue, useRangeSlider} from "@chakra-ui/react";
 import { useEffect } from "react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { useQuery } from "react-query";
@@ -24,7 +24,11 @@ export default function UserList(){
                 })
             }
         })
-    })
+    
+    return useRangeSlider;
+},{
+    staleTime: 1000 * 60 * 5,
+})
 
 
     const isWideVersion = useBreakpointValue({
