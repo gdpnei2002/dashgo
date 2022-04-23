@@ -17,6 +17,7 @@
     "@hookform/resolvers": "^2.8.8",
     "@projectstorm/react-diagrams": "^6.7.0",
     "apexcharts": "^3.35.0",
+    "axios": "^0.26.1",
     "emotion-theming": "^11.0.0",
     "framer-motion": "^6.3.0",
     "next": "12.1.5",
