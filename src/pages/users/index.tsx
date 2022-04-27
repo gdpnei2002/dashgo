@@ -100,9 +100,6 @@ export default function UserList({ users }) {
                                 </Tbody>
                             </Table>
                             <Pagination
-                            totalCountOfRegisters={data.totalCount}
-                            currentPage={page}
-                            onPageChange={setPage}
                             />
                         </>
                     )}
