@@ -1,6 +1,6 @@
 import { Box, Button, Checkbox, Flex, Heading, Icon, Link, Spinner, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue} from "@chakra-ui/react";
 import { useState } from "react";
-import { RiAddLine, RiPencilLine } from "react-icons/ri";
+import { RiAddLine} from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
@@ -45,7 +45,7 @@ export default function UserList({ users }) {
                                     { !isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4"/>}
                                 </Heading>
                                 
-                            <NextLink href="/users/create">
+                            <NextLink href="/users/create" passHref>
                                 <Button as="a"
                                 size="sm"
                                 fontSize="sm"
@@ -79,7 +79,7 @@ export default function UserList({ users }) {
                                     </Tr>
                                 </Thead>
                                 <Tbody>
-                                   {data.users.map(user => {
+                                {data.users.map(user => {
                                         return(
                                         <Tr key={user.id}>
                                             <Td px={["4", "4","6"]}>
@@ -94,24 +94,16 @@ export default function UserList({ users }) {
                                                 </Box>
                                             </Td>
                                             { isWideVersion &&  <Td>{user.createdAt}</Td>}
-                                            <Td>
-                                                <Button as="a"
-                                                size="sm"
-                                                fontSize="sm"
-                                                colorScheme="purple"
-                                                leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
-                                                Editar
-                                                </Button>
-                                            </Td>
                                         </Tr>
                                         )
                                     })}
                                 </Tbody>
                             </Table>
                             <Pagination
-                                totalCountOfRegisters={data.totalCount}
-                                currentPage={page}
-                                onPageChange={setPage}/>
+                            totalCountOfRegisters={data.totalCount}
+                            currentPage={page}
+                            onPageChange={setPage}
+                            />
                         </>
                     )}
                 </Box>
