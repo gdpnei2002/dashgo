@@ -1,13 +1,14 @@
 import {Header} from "../components/Header";
 import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
 import { Sidebar } from "../components/Sidebar";
+import { ApexOptions } from 'apexcharts';
 import dynamic from "next/dynamic";
 
 const Chart = dynamic(() => import("react-apexcharts"),{
     ssr: false,
 })
 
-const options = {
+const options: ApexOptions = {
     chart: {
       toolbar:{
          show: false,
@@ -15,7 +16,7 @@ const options = {
       zoom: {
           enabled: false,
       },
-      forColor: theme.colors.gray[500],
+      foreColor: theme.colors.gray[500],
     },
     grid: {
         show: false,
@@ -28,12 +29,12 @@ const options = {
     },
     xaxis: {
        type: 'datetime',
-       axisborder:{
-           color: theme.colors.gray[600]
-       },
-       axisTics: {
+       axisBorder: {
         color: theme.colors.gray[600]
-       },
+      },
+      axisTicks: {
+        color: theme.colors.gray[600]
+      },
        categories:[
         '2022-03-01T00:00:00.000Z',
         '2022-03-02T00:00:00.000Z',
